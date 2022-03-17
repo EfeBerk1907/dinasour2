@@ -14,6 +14,8 @@ import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
 
 
+
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -30,6 +32,13 @@ public class App {
         return false;
     }
     public static void main(String[] args) {
+
+      Logger logger = LogManager.getLogger(App.class);
+
+      int port = Integer.parseInt(System.getenv("PORT"));
+      port(port);
+      logger.error("Current port number:" + port);
+
 
         System.out.println(new App().getGreeting());
 
