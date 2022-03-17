@@ -9,6 +9,8 @@ import static spark.Spark.port;
 import static spark.Spark.post;
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
