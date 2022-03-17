@@ -72,11 +72,15 @@ public class App {
           sc1.close();
           System.out.println(inputList);
 
-
+          
           String input2 = req.queryParams("input2").replaceAll("\\s","");
+          java.util.Scanner sc2 = new java.util.Scanner(input2);
           int input2AsInt = Integer.parseInt(input2);
+          sc2.close();
           String input3 = req.queryParams("input3").replaceAll("\\s","");
+          java.util.Scanner sc3 = new java.util.Scanner(input3);
           int input3AsInt = Integer.parseInt(input3);
+          sc3.close();
 
           boolean result = App.fonksiyon(inputList, input2AsInt, input3AsInt);
 
