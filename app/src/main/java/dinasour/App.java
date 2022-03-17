@@ -23,6 +23,14 @@ public class App {
         return "Hello World!";
     }
 
+    public static boolean fonksiyon(ArrayList<Integer> list, int a, int b){
+
+      if(list.contains(a + b)){
+        return true;
+      }
+      return false;
+    }
+
 
     public static boolean search(ArrayList<Integer> array, int e) {
         System.out.println("inside search");
@@ -67,8 +75,10 @@ public class App {
 
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
+          String input3 = req.queryParams("input2").replaceAll("\\s","");
+          int input3AsInt = Integer.parseInt(input3);
 
-          boolean result = App.search(inputList, input2AsInt);
+          boolean result = App.fonksiyon(inputList, input2AsInt, input3AsInt);
 
           Map<String, Boolean> map = new HashMap<String, Boolean>();
           map.put("result", result);
