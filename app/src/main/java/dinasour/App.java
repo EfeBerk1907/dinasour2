@@ -25,6 +25,10 @@ public class App {
 
     public static boolean fonksiyon(ArrayList<Integer> list, int a, int b){
 
+      if (list == null) return false;
+
+      if (list.size() == 0) return false;
+
       if(list.contains(a + b)){
         return true;
       }
